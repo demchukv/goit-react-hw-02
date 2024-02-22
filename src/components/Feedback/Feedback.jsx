@@ -18,9 +18,7 @@ const Feedback = ({ states: { good = 0, neutral = 0, bad = 0 }, totalFeedback = 
 }
 
 Feedback.propTypes = {
-    good: PropTypes.number,
-    neutral: PropTypes.number,
-    bad: PropTypes.number,
+    states: PropTypes.object,
     totalFeedback: PropTypes.number.isRequired,
     positiveFeedback: PropTypes.number.isRequired,
 }

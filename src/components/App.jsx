@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import './App.css'
 import Description from './Description/Description';
 import Options from './Options/Options'
@@ -48,26 +47,10 @@ function App() {
       <Description />
       <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback = {totalFeedback} />
       <Feedback states={feedbackStates} totalFeedback = {totalFeedback} positiveFeedback = {positiveFeedback} />
-      <Notification totalFeedback = {totalFeedback} />
+      {!totalFeedback && <Notification />}
     </>
   )
 
-}
-
-Options.propTypes = {
-  updateFeedback: PropTypes.func.isRequired,
-  resetFeedback: PropTypes.func.isRequired,
-  totalFeedback: PropTypes.number.isRequired,
-}
-
-Feedback.propTypes = {
-  states: PropTypes.object.isRequired,
-  totalFeedback: PropTypes.number.isRequired,
-  positiveFeedback: PropTypes.number.isRequired,
-}
-
-Notification.propTypes = {
-  totalFeedback: PropTypes.number.isRequired,
 }
 
 export default App

@@ -1,9 +1,6 @@
-
-const Notification = ({ totalFeedback = 0 }) => {
+const Notification = () => {
   return (
-    <>
-    {!totalFeedback && <p>No feedback yet</p>}
-    </>
+    <p>No feedback yet</p>
   )
 }
 
